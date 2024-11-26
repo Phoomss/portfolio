@@ -39,35 +39,39 @@ const Education = () => {
   }, []);
 
   return (
-    <div className="education container mt-4" data-aos="fade-up">
+    <div className="education container mt-5" data-aos="fade-up">
       <div className="text-center d-flex flex-column align-items-center">
-        <h2 className="mb-0">EDUCATION!</h2>
-        <hr className="border border-primary border-2 opacity-100 w-25" />
+        <h2 className="fw-bold text-primary">EDUCATION</h2>
+        <hr className="border border-primary border-2 opacity-100 w-50" />
       </div>
 
-      <div className="detail-education">
+      <div className="detail-education mt-4">
         {educationData.map((education, index) => (
           <div
             key={education.id}
-            className="col-12"
+            className="col-12 mb-4"
             data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
           >
-            <div className="card mb-3 mx-auto" style={{ maxWidth: 540 }}>
+            <div
+              className="card shadow-lg border-0 h-100 hover-card"
+              style={{ maxWidth: '540px', margin: '0 auto' }}
+            >
               <div className="row g-0">
                 <div className="col-md-4">
                   <img
                     src={education.logo || 'path/to/default-image.png'}
                     alt={`${education.institution} logo`}
                     className="img-fluid rounded-start"
+                    style={{ objectFit: 'contain', height: '100%' }}
                   />
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">
-                    <h5 className="card-title">{education.degree}</h5>
-                    <p className="card-text mb-0">{education.institution}</p>
+                    <h5 className="card-title fw-bold text-dark">{education.degree}</h5>
+                    <p className="card-text mb-1">{education.institution}</p>
                     <hr />
-                    <p className="card-text mb-0">{education.faculty}</p>
-                    <p className="card-text mb-0">{education.major || education.branch}</p>
+                    <p className="card-text mb-1 text-muted">{education.faculty}</p>
+                    <p className="card-text mb-2 text-muted">{education.major || education.branch}</p>
                     <p className="card-text">
                       <small className="text-body-secondary">{education.duration}</small>
                     </p>
