@@ -9,6 +9,7 @@ import {
     FaGithub,
     FaHeadset,
     FaLinkedin,
+    FaMedium
 } from "react-icons/fa";
 
 const detailAbout = {
@@ -72,6 +73,15 @@ const AboutMe = () => {
 
                                     >
                                         <FaLinkedin style={iconStyle} />
+                                    </a>
+                                    <a
+                                        href="https://medium.com/@narongsakP"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="pb-2"
+
+                                    >
+                                        <FaMedium style={iconStyle} />
                                     </a>
                                 </div>
                             </div>
